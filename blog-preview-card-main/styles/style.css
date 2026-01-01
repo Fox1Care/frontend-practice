@@ -36,6 +36,10 @@ main {
   flex-direction: column;
 }
 
+.card__title {
+  font-size: 1.2em;
+}
+
 .card__image {
   border-radius: 0.6rem;
   object-fit: contain;
