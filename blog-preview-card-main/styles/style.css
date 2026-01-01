@@ -24,7 +24,7 @@ main {
 }
 
 .card {
-  width: 16rem;
+  width: 17rem;
   padding: 1em;
   border: 1px solid black;
   border-radius: 1rem;
@@ -38,7 +38,7 @@ main {
 }
 
 .card__image {
-  width: 16rem;
+  width: 17rem;
   border-radius: 0.6rem;
   object-fit: contain;
 }
