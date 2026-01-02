@@ -1,0 +1,90 @@
+body {
+  background-color: #141414;
+  color: white;
+  font-family: Inter, Arial, Helvetica, sans-serif; }
+
+body main, .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 0.6em; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none; }
+
+html, body, main {
+  width: 100%;
+  height: 100%; }
+
+footer, header, nav, section, main {
+  display: block; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0; }
+
+.profile {
+  background-color: #1f1f1f;
+  padding: 1.5em 1.5em;
+  border-radius: 0.45rem; }
+  .profile__pfp {
+    width: 32.5%;
+    border-radius: 4rem;
+    margin-bottom: 1em; }
+  .profile__author {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 0.4rem; }
+  .profile__address {
+    color: #c5f82a;
+    font-weight: bold; }
+  .profile__social-btn:hover {
+    background-color: #c5f82a; }
+  .profile__social-btn:active {
+    opacity: 0.7; }
+
+.profile__description, .profile__address {
+  font-size: 0.6rem;
+  font-style: normal;
+  margin-bottom: 0.8rem; }
+
+.profile__social-btn {
+  width: 12.5rem;
+  font-family: inherit;
+  padding: 1em 1em;
+  border-radius: 0.3rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: white;
+  background-color: #333333;
+  cursor: pointer;
+  transition: opacity 0.2s, background-color 0.2s;
+  border: none; }
+
+/*# sourceMappingURL=main.css.map */

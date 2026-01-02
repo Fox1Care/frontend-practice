@@ -1,0 +1,61 @@
+@mixin pbr($p, $br) {
+    padding: $p $p;
+    border-radius: $br;
+}
+
+.profile {
+    background-color: $g8;
+    @include pbr($p + 0.5, $br * 1.5);
+    @extend %tplflex;
+
+    &__pfp {
+        width: 32.5%;
+        border-radius: 4rem;
+        margin-bottom: 1em;
+    }
+
+    &__author {
+        font-size: 1.1em;
+        font-weight: 500;
+        margin-bottom: 0.4rem;
+    }
+
+    &__description {
+        @extend %tpltxt;
+    }
+
+    &__address {
+        color: $g;
+        @extend %tpltxt;
+        font-weight: bold;
+    }
+
+    &__social-btn {
+        @extend %tplbtn;
+        &:hover {
+            background-color: $g;
+        }
+        &:active {
+            opacity: $op;
+        }
+    }
+}
+
+%tpltxt {
+    font-size: $fz;
+    font-style: normal;
+    margin-bottom: 0.8rem;
+}
+
+%tplbtn {
+    width: 12.5rem;
+    font-family: inherit;
+    @include pbr($p, $br);
+    font-size: $fz;
+    font-weight: 700;
+    color: $w;
+    background-color: $g7;
+    cursor: pointer;
+    transition: opacity 0.2s, background-color 0.2s;
+    border: none;
+}

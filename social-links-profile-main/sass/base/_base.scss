@@ -1,0 +1,17 @@
+body {
+  background-color: $g9;
+  color: $w;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  main {
+    @extend %tplflex;
+  }
+}
+
+%tplflex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 0.6em;
+}
