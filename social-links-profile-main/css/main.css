@@ -9,7 +9,7 @@ body main, .profile {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  gap: 0.6em; }
+  gap: 0.8em; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -58,9 +58,11 @@ input {
     border-radius: 4rem;
     margin-bottom: 1em; }
   .profile__author {
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: 500;
     margin-bottom: 0.4rem; }
+  .profile__description {
+    font-weight: 300; }
   .profile__address {
     color: #c5f82a;
     font-weight: bold; }
@@ -70,16 +72,16 @@ input {
     opacity: 0.7; }
 
 .profile__description, .profile__address {
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   font-style: normal;
   margin-bottom: 0.8rem; }
 
 .profile__social-btn {
-  width: 12.5rem;
+  width: 14.75rem;
   font-family: inherit;
   padding: 1em 1em;
   border-radius: 0.3rem;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   font-weight: 700;
   color: white;
   background-color: #333333;
