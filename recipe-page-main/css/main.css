@@ -162,8 +162,8 @@ main, .recipe {
   border-radius: 0.7rem;
   background: #fff;
   margin: 2rem auto;
-  width: 35.75%;
-  font-size: 0.9rem;
+  width: 40%;
+  font-size: 0.85rem;
   background-color: #ffff; }
   @media (max-width: 768px) {
     .recipe {
@@ -216,6 +216,7 @@ main, .recipe {
     height: 0.6px;
     background-color: #e4ded8; }
   .recipe__table {
+    width: 100%;
     border-collapse: collapse; }
     .recipe__table tr {
       border-bottom: 0.1px solid #e4ded8; }
@@ -230,6 +231,7 @@ main, .recipe {
       font-weight: 700; }
     .recipe__table-caption {
       display: inline-block;
+      font-size: 0.9em;
       margin-bottom: 1rem;
       color: #5f574e; }
 
