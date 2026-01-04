@@ -1,0 +1,43 @@
+@mixin font-face($name, $src) {
+    @font-face {
+        font-family: $name;
+        src: url($src) format("truetype");
+    }
+}
+
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: sm) { @content; }
+  }
+  @else if $breakpoint == md {
+    @media (max-width: $md) { @content; }
+  }
+}
+
+@mixin pbr($p, $br) {
+  padding: $p;
+  border-radius: $br;
+}
+
+@include font-face($font-family-heading, $font-path-heading);
+@include font-face($font-family-body, $font-path-body);
+
+
+body {
+    font-family: $font-family-body;
+    background-color: $s100;
+}
+
+main {
+    @extend %tplflex;
+}
+
+%tplflex {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+

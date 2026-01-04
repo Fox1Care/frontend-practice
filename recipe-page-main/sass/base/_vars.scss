@@ -1,0 +1,32 @@
+//Fonts
+$font-path-body: "../assets/fonts/outfit/Outfit-VariableFont_wght.ttf";
+$font-family-body: "Outfit";
+$font-path-heading: "../assets/fonts/young-serif/YoungSerif-Regular.ttf";
+$font-family-heading: "YoungSerif";
+
+//Colors 
+$s100: hsl(30, 54%, 90%);
+$s150: hsl(30, 18%, 87%);
+$s600: hsl(30, 10%, 34%);
+$s900: hsl(24, 5%, 18%);
+
+$b800: hsl(14, 45%, 36%);
+
+$r800: hsl(332, 51%, 32%);
+$r800bg: hsla(332, 51%, 32%, 0.03);
+$r50: hsl(330, 100%, 98%);
+
+//Font Related 
+$fzs: 0.9em;
+$fzm: 1.6em;
+$lh: 1.4em;
+
+//Spacing Related 
+$p: 0.8em;
+$br: 0.7rem;
+$m: 0.5rem;
+
+//Media Related
+$sm: 480px; 
+$md: 768px;
+$lg: 1024px;
