@@ -1,0 +1,46 @@
+@mixin pbr ($p:0, $add:0, $type:'', $br:0) {
+  @if ($add and $type) {
+    $psides: ($p + $add);
+    padding: #{$p}#{$type} #{$psides}#{$type};
+  }
+  @else {
+    padding: $p#{$type};
+  }
+  border-radius: $br;
+}
+
+@mixin flex ($dr:row, $jc:flex-start) {
+  display: flex;
+  flex-direction: $dr;
+  justify-content: $jc;
+}
+
+%tplcenter {
+  text-align: center;
+	align-items: center;
+}
+
+body {
+  font-family: $ff;
+  background-color: $n900;
+  color: $n0;
+}
+
+main {
+  @include flex(column);
+  padding: #{$p}#{rem} #{'min(' + ($p + $add) + rem + ', 6%)'};
+  }
+
+button {
+  @include pbr(0.3, 0.2, em, $br);
+  border: 1px solid $n500;
+  color: $n0;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 0.3rem;
+
+  &:focus {
+    outline: 2px solid $b400;
+    outline-offset: 3px;
+  }
+}
