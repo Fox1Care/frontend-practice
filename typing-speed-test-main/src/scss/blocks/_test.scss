@@ -1,0 +1,202 @@
+@use '../base/vars' as *;
+@use '../base/tpls' as *;
+@use '../base/mixins' as mixins;
+
+.test {
+	@include mixins.flex(column);
+
+	&__underline {
+		width: 100%;
+	}
+
+	&__logo {
+		width: 92%;
+	}
+
+	&__header {
+		@include mixins.flex($jc:space-between);
+		padding-bottom: 2rem;
+	}
+	
+	&__wrapper-stats {
+		@include mixins.flex($jc:space-between);
+	}
+
+	&__pb-label, &__stats, &__settings {
+		color: $n400;
+	}
+
+	&__divider {
+		color: $n800;
+		transform: scaleY(1.85); 
+		@include mixins.pbr(0, 0.9, rem);
+	}
+
+	&__pb-wpm, &__wpm-value, &__accuracy-value, &__time-value {
+		color: $n0;
+	}
+
+	&__stats, &__settings {
+		@include mixins.flex();
+		@extend %tplcenter;
+		gap: 0.2rem;
+	}
+
+	.choices {
+		display: none;
+		margin: 0;
+		z-index: 400;
+		color: $n0;
+
+		&[data-type*="select-one"] .choices__inner {
+			padding-bottom: #{calc($p / 9)}#{rem};
+		}
+
+		&[data-type*='select-one']::after {
+			border: none !important; 
+			width: 1rem;              
+			height: 1rem;
+			background-image: url('../../assets/images/icon-down-arrow.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			content: "";
+		}	
+
+		.choices__list--dropdown 
+		.choices__item--selectable.is-highlighted, 
+		.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+			background-color: $n500;
+		}
+
+		.choices__list--dropdown .choices__item--selectable:hover
+		{ 
+			background-color: $n500;
+		}
+		
+		&[data-type*="select-one"].is-open::after {
+  			transform: translateY(-30%) rotate(180deg);
+		}
+
+		
+		&__list--dropdown, &__list[aria-expanded] {
+			border: none;
+			background-color: $n800;
+		}
+		
+		 &__inner, &__list--dropdown,
+		 &.is-open .choices__inner, 
+		 &.is-open .choices__list--dropdown {
+			border-radius: #{$br}#{rem};
+		}
+		
+		&__inner {
+			background-color: transparent;
+			min-height: 0;
+			padding: 0 0 0 0;
+			@include mixins.pbr(calc($p / 9), 0, rem, $br);
+			@extend %tplcenter;
+			border: 1px solid $n500;
+		}
+
+		&__list--single {
+			padding: 0;
+		}
+	}
+
+	&__difficulty-label, &__mode-label {
+		padding-right: 0.6rem;
+	}
+
+	&__difficulty-btn:hover, &__mode-btn:hover {
+		color: $b400;
+		border-color: $b400;
+	}
+
+	&__text {
+		position: relative;
+	}
+
+	&__wrapper-start {
+		@include mixins.flex(column, center);
+		@extend %tplcenter;
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%;
+		z-index: 300;
+	}
+
+	&__wrapper-text {
+		filter: blur(2.5px) brightness(0.6);
+		margin: 1.2rem 0;
+	}
+
+	&__start-btn {
+		@include mixins.pbr(0.6, 0.0, rem, $br);
+		background-color: $b600;
+		font-size: 0.8em;
+		margin-bottom: 1em;
+	}
+
+	&__start-label {
+		font-size: 0.8em;
+	}
+
+	&__footer {
+		@include mixins.flex($jc:center);
+		@extend %tplcenter;
+	}
+
+	&__restart-logo {
+		padding-left: 0.3em;
+		height: 0.9em;
+	}
+	
+	&__restart-btn {
+		@include mixins.flex();
+		@include mixins.pbr(0.6, 0.0, em, $br);
+		@extend %tplcenter;
+		font-size: 0.9em;
+		background-color: $n800;
+		
+	}
+
+	@media screen {
+		@media (max-width: 615px) {
+
+      &__difficulty-label, &__mode-label, 
+      &__difficulty-btn, &__mode-btn, 
+      &__divider-dm {
+        display: none;
+	    }
+
+		.choices {
+			@include mixins.flex(row, center);
+		}
+
+		&__wrapper-difficulty, &__wrapper-mode {
+			width: 9rem;
+		}
+      
+      &__settings {
+        justify-content: space-between;
+      }
+		}
+
+		@media (max-width: 1070px)  {
+				&__wrapper-stats {
+					flex-direction: column;
+				}
+				&__stats {
+					margin-bottom: 1rem;
+				}
+		} 
+
+		@media (max-width: 1170px) {
+			&__stats, &__settings {
+				font-size: 0.9rem;
+			}
+		}
+	}
+}

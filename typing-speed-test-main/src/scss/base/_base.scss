@@ -1,0 +1,27 @@
+@use './vars' as *;
+@use './mixins' as mixins;
+
+body {
+  font-family: $ff;
+  background-color: $n900;
+  color: $n0;
+}
+
+main {
+  @include mixins.flex(column);
+  padding: #{$p}#{rem} #{'min(' + ($p + $add) + rem + ', 4%)'};
+  }
+
+button {
+  @include mixins.pbr(0.3, 0.2, em, $br);
+  border: 1px solid $n500;
+  color: $n0;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 0.3rem;
+
+  &:focus {
+    outline: 2px solid $b400;
+    outline-offset: 3px;
+  }
+}

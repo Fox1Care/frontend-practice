@@ -1,0 +1,17 @@
+@mixin pbr ($p:0, $add:0, $type:'', $br:0) {
+  @if ($add and $type) {
+    $psides: ($p + $add);
+    padding: #{$p}#{$type} #{$psides}#{$type};
+  }
+  @else {
+    padding: $p#{$type};
+  }
+  border: none;
+  border-radius: #{$br}#{$type};
+}
+
+@mixin flex ($dr:row, $jc:flex-start) {
+  display: flex;
+  flex-direction: $dr;
+  justify-content: $jc;
+}
