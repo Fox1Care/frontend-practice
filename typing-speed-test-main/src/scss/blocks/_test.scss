@@ -13,6 +13,10 @@
 		width: 92%;
 	}
 
+	 &__pb-label {
+		display: inline-block;
+	}
+
 	&__header {
 		@include mixins.flex($jc:space-between);
 		padding-bottom: 2rem;
@@ -107,7 +111,7 @@
 		padding-right: 0.6rem;
 	}
 
-	&__difficulty-btn:hover, &__mode-btn:hover {
+	&__difficulty-btn:hover, &__mode-btn:hover, .is-selected {
 		color: $b400;
 		border-color: $b400;
 	}
